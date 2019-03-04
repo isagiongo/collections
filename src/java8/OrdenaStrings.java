@@ -31,7 +31,9 @@ public class OrdenaStrings {
 		
 		//substitui o código acima e o método ComparadorPorTamanho
 		palavras.sort((s1, s2)-> Integer.compare(s1.length(), s2.length()));
-
+		
+		palavras.sort(Comparator.comparing(String::length));
+		
 		System.out.println("Imprimindo através do for: ");
 		for (String string : palavras) {
 			System.out.println("-- " + string);
